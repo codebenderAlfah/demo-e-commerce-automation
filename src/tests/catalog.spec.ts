@@ -17,7 +17,7 @@ test.describe('Product Catalog Scenarios', () => {
         await loginPage.login(users.standardUser);
 
         const count = await inventoryPage.getProductCount();
-        expect(count).toBe(6); // SauceDemo always has 6 core items
+        expect(count).toBe(6);
 
         const names = await inventoryPage.getProductNames();
         expect(names.length).toBe(6);

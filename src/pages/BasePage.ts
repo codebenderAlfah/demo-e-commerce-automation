@@ -11,7 +11,6 @@ export class BasePage {
         await this.page.goto(path);
     }
 
-    // Smart wait included for future glitch user
     async clickElement(locator: Locator) {
         await locator.waitFor({ state: 'visible' });
         await locator.click();
