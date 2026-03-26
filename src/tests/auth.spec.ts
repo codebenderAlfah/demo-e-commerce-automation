@@ -12,7 +12,6 @@ test.describe('Authentication Scenarios', () => {
     });
 
     test('Successful login with valid credentials', async ({ page }) => {
-        // Use the fixture data instead of hardcoded string
         await loginPage.login(users.standardUser);
 
         await expect(page).toHaveURL(/.*inventory.html/);
@@ -31,7 +30,6 @@ test.describe('Authentication Scenarios', () => {
     });
 
     test('Login failure with SQL injection attempt in username', async () => {
-        // A common SQL injection string to bypass auth
         await loginPage.login("' OR '1'='1", "' OR '1'='1");
         const error = await loginPage.getErrorMessage();
         expect(error).toContain('Username and password do not match');
