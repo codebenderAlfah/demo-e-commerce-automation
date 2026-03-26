@@ -9,7 +9,6 @@ export class CartPage extends BasePage {
     constructor(page: Page) {
         super(page);
         this.cartItems = page.locator('.cart_item');
-        // Matches any button where data-test starts with "remove-"
         this.removeButtons = page.locator('[data-test^="remove-"]');
         this.checkoutButton = page.locator('[data-test="checkout"]');
     }

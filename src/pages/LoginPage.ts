@@ -5,7 +5,7 @@ export class LoginPage extends BasePage {
     readonly usernameInput: Locator;
     readonly passwordInput: Locator;
     readonly loginButton: Locator;
-    readonly errorMessage: Locator; // <-- Added this
+    readonly errorMessage: Locator;
 
     constructor(page: Page) {
         super(page);
